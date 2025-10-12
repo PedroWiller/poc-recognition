@@ -1,10 +1,8 @@
-package aws
+package config
 
 import (
 	"context"
 	"log"
-
-	"poc-recognition/pkg/config/env"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
@@ -17,7 +15,7 @@ type RekognitionService struct {
 }
 
 func LoadConfig() aws.Config {
-	cfg, err := config.LoadDefaultConfig(context.TODO(), config.WithRegion(env.AWS_REGION))
+	cfg, err := config.LoadDefaultConfig(context.TODO(), config.WithRegion(AWS_REGION))
 	if err != nil {
 		log.Fatalf("unable to load SDK config, %v", err)
 	}

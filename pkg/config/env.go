@@ -1,4 +1,4 @@
-package env
+package config
 
 import (
 	"errors"
@@ -10,6 +10,14 @@ var (
 	AWS_SECRET_ACCESS_KEY string
 	AWS_REGION            string
 	S3_BUCKET             string
+	MONGO_COLLECTION      string
+	MONGODB_NAME          string
+	MONGO_URI             string
+	LOG_LEVEL             string
+	DB_POSTGRES_URI       string
+	REDIS_ADDR            string
+	REDIS_PASSWORD        string
+	REDIS_DB              int
 )
 
 func Load() error {
